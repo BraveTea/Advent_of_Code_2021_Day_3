@@ -8,9 +8,12 @@ public class Programme {
         System.out.println("Initialising...");
 
         File diagnosticReport = new File("src/diagnosticReport.txt");
-        DiagnosticFileInterpreter dfi = new DiagnosticFileInterpreter(diagnosticReport);
+        DiagnosticFileInterpreter dfi = new DiagnosticFileInterpreter();
 
-        System.out.println(dfi.returnBit(1));
+
+        dfi.fillBinaryString(diagnosticReport);
+        System.out.println(dfi.getBinaryString());
+
         // 011100011000   100011100111
         //     1816    *      2279      = 4138664
 //        String binaryString = "";
