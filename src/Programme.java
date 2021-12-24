@@ -12,16 +12,18 @@ public class Programme {
 
 
         dfi.fillBinaryString(diagnosticReport);
-        System.out.println(dfi.getBinaryString());
+//        System.out.println(dfi.getBinaryString());
+//        System.out.println(dfi.invertBinaryString(dfi.getBinaryString()));
+//        System.out.println(dfi.returnIntegerDecimalFromBinaryString(dfi.getBinaryString()));
+//        System.out.println(dfi.returnIntegerDecimalFromBinaryString(dfi.invertBinaryString(dfi.getBinaryString())));
+//        System.out.println(1816*2279);
 
-        // 011100011000   100011100111
-        //     1816    *      2279      = 4138664
-//        String binaryString = "";
-//
-//        for (int i = 0; i < 12; i++){
-//            binaryString += dfi.returnBit(i);
-//        }
-//
-//        System.out.println(binaryString);
+        int gammaRate = dfi.returnIntegerDecimalFromBinaryString(dfi.getBinaryString());
+        int epsilonRate = dfi.returnIntegerDecimalFromBinaryString(dfi.invertBinaryString(dfi.getBinaryString()));
+        int puzzleSolution = gammaRate * epsilonRate;
+
+        System.out.println(puzzleSolution);
+
+
     }
 }

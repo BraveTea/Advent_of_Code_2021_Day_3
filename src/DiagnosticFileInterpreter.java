@@ -31,6 +31,21 @@ public class DiagnosticFileInterpreter {
         }
     }
 
+    String invertBinaryString(String binString){
+        StringBuilder invertedBinaryString = new StringBuilder(); //used to concat in the if/else, IDEA started to grumble
+        for (int i = 0; i < binString.length(); i++){
+            if (binString.charAt(i) == '1'){
+                invertedBinaryString.append('0');
+            }
+            else invertedBinaryString.append('1');
+        }
+        return invertedBinaryString.toString();
+    }
+
+    int returnIntegerDecimalFromBinaryString(String binString){
+        return Integer.parseInt(binString, 2);
+    }
+
     int returnBit(int index){
         int bit;
         updateCountsPerBit(index);
